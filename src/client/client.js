@@ -1,6 +1,12 @@
 // Start up point of client side
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Home from './components/Home'
+import { BrowserRouter } from 'react-router-dom'
+import Routes from './Routes'
 
-ReactDOM.hydrate(<Home />, document.getElementById('app'))
+ReactDOM.hydrate(
+  <BrowserRouter>
+    <Routes />
+  </BrowserRouter>,
+  document.getElementById('app')
+)
