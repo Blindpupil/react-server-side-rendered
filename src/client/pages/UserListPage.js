@@ -14,7 +14,7 @@ class UserListPage extends Component {
   render() {
     return (
       <div>
-        <h1>Here's a list of users</h1>
+        <h2>Here's a list of users</h2>
         <ul> {this.renderUsers()} </ul>
       </div>
     )

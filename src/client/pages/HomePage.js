@@ -2,9 +2,15 @@ import React from 'react'
 
 const HomePage = () => {
   return (
-    <div>
+    <div className='center-align video-container' style={{marginTop: '6rem'}}>
       <h2>Welcome Home</h2>
-      <button onClick={()=>{console.log('Events are handled!')}}>Click meh</button>
+      <div>
+        <button className='waves-effect waves-light btn'
+          onClick={()=>{console.log('Events are handled!')}}
+        >
+          Click meh
+        </button>
+      </div>
     </div>
   )
 }
