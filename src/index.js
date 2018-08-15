@@ -7,11 +7,11 @@ import renderer from './helpers/renderer'
 import createStore from './helpers/createStore'
 
 const app = express()
-const port = process.env.PORT || 3002
+const port = process.env.PORT || 3000
 
 app.use('/api', proxy('http://react-ssr-api.herokuapp.com', {
   proxyReqOptDecorator(opts) {
-    opts.headers['x-forwarded-host'] = 'localhost:3002'
+    opts.headers['x-forwarded-host'] = 'localhost:3000'
     return opts
   }
 }))
