@@ -4,20 +4,22 @@ import { connect } from 'react-redux'
 
 const Header = ({ auth }) => {
   const authButton = auth ? (
-    <a href='api/logout' > Logout </a>
+    <li><a href='api/logout' > Logout </a></li>
   ) : (
-    <a href='api/auth/google' > Login </a>
+    <li><a href='api/auth/google' > Login </a></li>
   )
 
   return (
-    <div>
-      <Link to='/'>LOGO</Link>
-      <div>
-        <Link to='/users' >Users</Link>
-        <Link to='/admins' >Users</Link>
-        {authButton}
+    <nav>
+      <div className='nav-wrapper'>
+        <Link to='/' className='brand-logo'>LOGO</Link>
+        <ul className='right'>
+          <li><Link to='/users' >Users</Link></li>
+          <li><Link to='/admins' >Admins</Link></li>
+          {authButton}
+        </ul>
       </div>
-    </div>
+    </nav>
   )
 }
 
