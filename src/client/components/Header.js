@@ -14,8 +14,8 @@ const Header = ({ auth }) => {
       <div className='nav-wrapper'>
         <Link to='/' className='brand-logo'>LOGO</Link>
         <ul className='right'>
-          <li><Link to='/users' >Users</Link></li>
-          <li><Link to='/admins' >Admins</Link></li>
+          <li><Link to='/users'>Users</Link></li>
+          <li><Link to='/admins'>Admins</Link></li>
           {authButton}
         </ul>
       </div>
